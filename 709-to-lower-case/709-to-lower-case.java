@@ -1,10 +1,10 @@
 class Solution {
     public String toLowerCase(String s) {
-        String s1="";
+        StringBuilder sb = new StringBuilder();
         for(int i=0;i<s.length();i++){
-            if(Character.isUpperCase(s.charAt(i))) s1+=Character.toLowerCase(s.charAt(i));
-            else s1+=s.charAt(i);
+            if(Character.isUpperCase(s.charAt(i))) sb.append(Character.toLowerCase(s.charAt(i)));
+            else sb.append(s.charAt(i));
         }
-        return s1;
+        return sb.toString();
     }
 }
