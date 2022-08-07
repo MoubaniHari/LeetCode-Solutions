@@ -1,5 +1,7 @@
-Recursive Approach
+Iterative Approach
 if(n==0) return false;
-if(n==1) return true;
+while(n!=1){
 if(n%3!=0) return false;
-else isPowerOfThree(n/3);
+else n/=3;
+}
+return true;
