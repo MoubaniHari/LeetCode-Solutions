@@ -11,16 +11,14 @@
  */
 public class Solution {
     public ListNode detectCycle(ListNode head) {
-        Map<ListNode,Integer>map=new HashMap<>();
-        ListNode dummy=new ListNode(-100001);
-        dummy.next=head;
-        ListNode temp=dummy;
+        Set<ListNode> set=new HashSet<>();
+        ListNode temp=head;
         while(temp!=null)
         {
-            if(map.containsKey(temp.next))
-                return temp.next;
-            map.put(temp,temp.val);
+            if(set.contains(temp.next)) return temp.next;
+            set.add(temp);
             temp=temp.next;
-        }return null;
+        }
+        return null;
     }
 }
