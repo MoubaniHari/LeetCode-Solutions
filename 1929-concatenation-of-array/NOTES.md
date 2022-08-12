@@ -16,3 +16,13 @@ for(int n:arr)
 l.add(n);
 return l;
 }
+#     Another Brute Force Approach
+public int[] getConcatenation(int[] nums) {
+int[] ans = new int[2*nums.length];
+int i=0;
+for(int n:nums)
+ans[i++]=n;
+for(int n:nums)
+ans[i++]=n;
+return ans;
+}
