@@ -6,9 +6,9 @@ class Solution {
         for(char c:key.toCharArray())
             if(!map.containsKey(c)) 
                 map.put(c,ch++);
-        String dec="";
+        StringBuilder sb = new StringBuilder();
         for(char c:message.toCharArray())
-            dec+=map.get(c);
-        return dec;
+            sb.append(map.get(c));
+        return sb.toString();
     }
 }
